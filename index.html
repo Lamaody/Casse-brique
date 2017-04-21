@@ -10,6 +10,7 @@
   <script src="js/Brique.js"></script>
   <script src="js/Ball.js"></script>
   <script src="js/Barre.js"></script>
+  <script src="js/collision.js"></script>
   <script src="js/MoteurJeu.js"></script>
   <script src="js/run.js"></script>
   <script src="js/ecouteur.js"></script>
@@ -17,8 +18,32 @@
   
 </head>
 <body>
+	<img id="cafe" src="img/cafe.png" alt="Pause" hidden="true">
+	<img id="lose" width="100" height="100" src="img/smiley_sad.png" alt="Game over" hidden="true">
   <h1 align="center" style="color:black;background:#fff;width:300px;margin-left:auto;margin-right:auto;">Jeu de briques</h1>
-    <div align="center"><canvas id="myCanvas" width=400 height=600 ></canvas></div>
+  <div id="reglage">
+		<h2 align="center" style="font-family:Papyrus;">OPTION</h2>
+		<table border="0">
+			<tr>
+				<td>Couleur du fond :</td>
+				<td><input type="color" id="couleurFond" value="#DADADA"/></td>
+			</tr>
+			<tr>
+				<td>Couleur de la balle de départ :</td>
+				<td><input type="color" id="couleurBalleDepart" value="#FFFFFF"/></td>
+			</tr>
+			<tr>
+				<td>Couleur de la barre :</td>
+				<td><input type="color" id="couleurBarre" value="#404040"/></td>
+			</tr>
+		
+		</table></br>
+		<div id="buttons" align="center">
+			<button onclick="validerReglage()" id="valider">Valider</button>
+			<button onclick="commencerLeJeu()" id="commencer">Commencer le jeu</button>
+		</div>
+  </div>
+    <div><canvas id="myCanvas" width=400 height=600 ></canvas></div>
 	<p id="fps"></p>
 </body>
 </html>
