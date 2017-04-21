@@ -1,15 +1,15 @@
 class Barre extends Brique{
-	constructor(x, y, longueur, largeur, vx, vy) {
-		super(x, y, longueur, largeur, "#F3F7F2", vx, vy);
+	constructor(x, y, longueur, largeur, vx, vy, couleurEspace) {
+		super(x, y, longueur, largeur, couleurEspace, vx, vy);
 		this.duration=2500;
 		this.originalLongueur=longueur;
 	}
 	
-	draw(ctx){
+	draw(ctx, couleur){
 		super.draw(ctx);
 		ctx.save(); 
 		if (this.longueur < canvas.width){
-			ctx.fillStyle = "#404040";
+			ctx.fillStyle = couleur;
 			ctx.fillRect(0, this.y, this.x, this.largeur);
 			ctx.fillRect(this.x+this.longueur, this.y, canvas.width-this.x-this.longueur, this.largeur);
 		}
