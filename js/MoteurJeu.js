@@ -285,10 +285,10 @@ function MoteurJeu(){
 				break;
 			case gameState.over:
 				
-				fontSize = 50;
-				ctx.font = fontSize + 'px Courier BOLD';
+				fontSize = 40;
+				ctx.font = 'italic bold '+fontSize + 'px Papyrus';
 				ctx.fillStyle = '#ffa71d';
-				ctx.fillText("GAME OVER",50,height/2);
+				ctx.fillText("GAME OVER",50,height/4);
 				
 				fontSize = 20;
 				ctx.font = fontSize + 'px Courier BOLD';
@@ -310,9 +310,9 @@ function MoteurJeu(){
 				}
 				
 				fontSize = 50;
-				ctx.font = fontSize + 'px Courier BOLD';
+				ctx.font = 'italic bold '+fontSize + 'px Papyrus';
 				ctx.fillStyle = '#ffa71d';
-				ctx.fillText("PAUSE",130,height/2);
+				ctx.fillText("PAUSE",100,height/2);
 				
 				fontSize = 15;
 				ctx.font = fontSize + 'px Courier BOLD';
